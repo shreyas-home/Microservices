@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "3f226689-1e3f-487a-8ad9-e7aea47f299a",
+		"name": "Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6891145"
+	},
+	"item": [
+		{
+			"name": "Platform",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n        \"name\": \"Docker\",\r\n        \"publisher\": \"Docker\",\r\n        \"cost\": \"free\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5141/api/platforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5141",
+							"path": [
+								"api",
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Command",
+			"item": [
+				{
+					"name": "Get commands for platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5046/api/c/platforms/4/commands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5046",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								"4",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Command for a platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"HowTo\":\"How to \",\r\n    \"CommandLine\":\"Command Line\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5046/api/c/platforms/4/commands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5046",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								"4",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

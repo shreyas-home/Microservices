@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "77bd3edf-cd0e-426e-aa7f-b899161cb3bf",
+		"name": "K8S",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6891145"
+	},
+	"item": [
+		{
+			"name": "Nginx (Commands)",
+			"item": [
+				{
+					"name": "Get commands for platform Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://acme.com/api/c/platforms/5/commands",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								"5",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Command for a platform Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"HowTo\":\"Push docker build to hub\",\r\n    \"CommandLine\":\"docker push <Name of docker image>\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://acme.com/api/c/platforms/5/commands",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								"5",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://acme.com/api/c/platforms",
+							"protocol": "http",
+							"host": [
+								"acme",
+								"com"
+							],
+							"path": [
+								"api",
+								"c",
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nginx (platform)",
+			"item": []
+		},
+		{
+			"name": "Get All platforms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://acme.com/api/platforms/",
+					"protocol": "http",
+					"host": [
+						"acme",
+						"com"
+					],
+					"path": [
+						"api",
+						"platforms",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new platform",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \r\n        \"name\": \"RubyonRails\",\r\n        \"publisher\": \"RoR\",\r\n        \"cost\": \"free\"\r\n }\r\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://acme.com/api/platforms/",
+					"protocol": "http",
+					"host": [
+						"acme",
+						"com"
+					],
+					"path": [
+						"api",
+						"platforms",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
